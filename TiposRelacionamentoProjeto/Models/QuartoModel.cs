@@ -1,4 +1,6 @@
-﻿namespace TiposRelacionamentoProjeto.Models
+﻿using System.Text.Json.Serialization;
+
+namespace TiposRelacionamentoProjeto.Models
 {
     public class QuartoModel
     {
@@ -9,6 +11,7 @@
         public int CasaId { get; set; }
 
         //Relacionamento
+        [JsonIgnore]
         public CasaModel Casa { get; set; }
     }
 }

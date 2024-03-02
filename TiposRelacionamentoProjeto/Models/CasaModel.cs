@@ -9,9 +9,8 @@ namespace TiposRelacionamentoProjeto.Models
         public string Descricao { get; set; }
 
         //Relacionamento
-        [JsonIgnore]
-        public List<QuartoModel> Quartos { get; set; }
         public EnderecoModel Endereco { get; set; }
+        public List<QuartoModel> Quartos { get; set; }
         public List<MoradorModel> Moradores { get; set; } 
 
     }

@@ -6,5 +6,7 @@
         public EnderecoCriacaoDto EnderecoClassDto { get; set; }
 
         public List<QuartoCriacaoDto> QuartoClassDto { get; set; }
+
+        public List<MoradoresCrracaoDto> MoradorClassDto { get; set; }
     }
 }

@@ -1,0 +1,35 @@
+{
+  "descricaoDto": "CasaD",
+  "enderecoClassDto": {
+    "ruaDto": "RuaD",
+    "numeroDto": 277
+  },
+  "quartoClassDto": [
+    {
+      "descricaoDto": "QuartoD"
+    },
+     {
+      "descricaoDto": "CozinhaD"
+    }
+  ]
+}
+
+
+
+{
+  "descricaoDto": "CasaD",
+  "enderecoClassDto": {
+    "ruaDto": "RuaD",
+    "numeroDto": 299
+  },
+  "quartoClassDto": [
+    {
+      "descricaoDto": "QuartoD"
+    }
+  ],
+  "moradorClassDto": [
+    {
+      "morador": "Luana"
+    }
+  ]
+}

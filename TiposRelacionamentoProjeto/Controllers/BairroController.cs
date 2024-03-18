@@ -51,8 +51,8 @@ namespace TiposRelacionamentoProjeto.Controllers
             await _context.SaveChangesAsync();
 
 
-            //return Ok( await _context.Casas.Include(e => e.Endereco).Include( q => q.Quartos).ToListAsync()  ); 
-            return Ok(await _context.Casas.ToListAsync());
+            return Ok( await _context.Casas.Include(e => e.Endereco).Include( q => q.Quartos).Include(m => m.Moradores).ToListAsync()  ); 
+            //return Ok(await _context.Casas.ToListAsync());
         }
 
         [HttpGet("{id}")]

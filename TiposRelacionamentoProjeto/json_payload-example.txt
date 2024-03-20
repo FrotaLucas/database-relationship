@@ -1,35 +1,37 @@
 {
-  "descricaoDto": "CasaD",
+  "descricaoDto": "CasaE",
   "enderecoClassDto": {
-    "ruaDto": "RuaD",
-    "numeroDto": 277
+    "ruaDto": "RuaE",
+    "numeroDto": 555
   },
   "quartoClassDto": [
     {
-      "descricaoDto": "QuartoD"
+      "descricaoDto": "SalaE"
     },
-     {
-      "descricaoDto": "CozinhaD"
-    }
-  ]
-}
-
-
-
-{
-  "descricaoDto": "CasaD",
-  "enderecoClassDto": {
-    "ruaDto": "RuaD",
-    "numeroDto": 299
-  },
-  "quartoClassDto": [
-    {
-      "descricaoDto": "QuartoD"
+ {
+      "descricaoDto": "CozinhaE"
     }
   ],
   "moradorClassDto": [
     {
-      "morador": "Luana"
+      "morador": "Eliane"
     }
   ]
 }
+
+
+
+sql query
+
+Delete FROM [TiposRelacionamentos].[dbo].[Morador] where Id  = 6
+
+select * from TiposRelacionamentos.dbo.Casas;
+
+select * from TiposRelacionamentos.dbo.Enderecos;
+
+select * from TiposRelacionamentos.dbo.Morador;
+
+select * from TiposRelacionamentos.dbo.QuartoModel;
+
+
+

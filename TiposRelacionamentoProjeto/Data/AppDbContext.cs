@@ -16,7 +16,7 @@ namespace TiposRelacionamentoProjeto.Data
 
         //ATENCAO Tabela de quarto foi criada sem colocar antes aqui ela coforme
         //foi feitas com as tabelas Casas e Endereços. Por isso a tabela Quartos se chama
-        //QuartoModel
+        //QuartoModel. Relacionamente 1 - N
 
         public DbSet<MoradorModel> Morador { get; set;}
 

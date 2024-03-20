@@ -50,7 +50,7 @@ namespace TiposRelacionamentoProjeto.Controllers
             _context.Casas.Add(novaCasa);
             await _context.SaveChangesAsync();
 
-
+            //Esse return ajuda a colocar casa, endereco, quartos e morador na ordem que vc deseja
             return Ok( await _context.Casas.Include(e => e.Endereco).Include( q => q.Quartos).Include(m => m.Moradores).ToListAsync()  ); 
             //return Ok(await _context.Casas.ToListAsync());
         }

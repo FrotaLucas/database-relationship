@@ -19,9 +19,95 @@
   ]
 }
 
+//response Swagger
+
+[
+  {
+    "id": 1,
+    "descricao": "CasaA",
+    "endereco": {
+      "id": 1,
+      "rua": "RuaA",
+      "numero": 200,
+      "casaId": 1
+    },
+    "quartos": [],
+    "moradores": []
+  },
+  {
+    "id": 4,
+    "descricao": "CasaC",
+    "endereco": null,
+    "quartos": [],
+    "moradores": [
+      {
+        "id": 1,
+        "nomes": "Caio"
+      },
+      {
+        "id": 2,
+        "nomes": "Felipe"
+      },
+      {
+        "id": 3,
+        "nomes": "Julia"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "descricao": "CasaD",
+    "endereco": {
+      "id": 23,
+      "rua": "RuaD",
+      "numero": 299,
+      "casaId": 18
+    },
+    "quartos": [
+      {
+        "id": 21,
+        "descricao": "QuartoD",
+        "casaId": 18
+      }
+    ],
+    "moradores": [
+      {
+        "id": 5,
+        "nomes": "Luci"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "descricao": "CasaE",
+    "endereco": {
+      "id": 25,
+      "rua": "RuaE",
+      "numero": 555,
+      "casaId": 20
+    },
+    "quartos": [
+      {
+        "id": 23,
+        "descricao": "SalaE",
+        "casaId": 20
+      },
+      {
+        "id": 24,
+        "descricao": "CozinhaE",
+        "casaId": 20
+      }
+    ],
+    "moradores": [
+      {
+        "id": 7,
+        "nomes": "Eliane"
+      }
+    ]
+  }
 
 
-sql query
+//SQL query
 
 Delete FROM [TiposRelacionamentos].[dbo].[Morador] where Id  = 6
 

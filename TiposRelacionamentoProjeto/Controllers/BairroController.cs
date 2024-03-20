@@ -59,17 +59,27 @@ namespace TiposRelacionamentoProjeto.Controllers
         public async Task<IActionResult> GetCasa(int id)
         {
             // Retrieve a CasaModel instance from the database, including related EnderecoModel and QuartoModels
+            //ATENCAO: se Endereco ou Quarto ou Morador nao exister o programa trava!!
+
+            //opt 1
             CasaModel retrievedCasa = await _context.Casas
-                .Include(c => c.Endereco) // Include related EnderecoModel
-                .Include(c => c.Quartos)  // Include related QuartoModels
-                .FirstOrDefaultAsync(c => c.Id == id);
+            .Include(c => c.Endereco)
+            .Include(c => c.Quartos)
+            .Include(c => c.Moradores)
+            .FirstOrDefaultAsync(c => c.Id == id);
+
+
+            //opt 2 NAO FUNCIONA PQ Include eh metodo do entityframework para fazer joinsQuerys Logo aqui nao esta sendo feita essas queries 
+            CasaModel retrievedCasa2 = await _context.Casas.FirstOrDefaultAsync( c => c.Id == id);
+
+       
 
             if (retrievedCasa == null)
             {
-                return NotFound(); // Return 404 Not Found if CasaModel with the specified id is not found
+                return NotFound();
             }
 
-            // Optionally, you can create a DTO to shape the response before returning it
+            // Creating DTO to shape the response before returning it
             var casaDto = new CasaCriacaoDto
             {
 
@@ -84,8 +94,12 @@ namespace TiposRelacionamentoProjeto.Controllers
                 QuartoClassDto = retrievedCasa.Quartos.Select(q => new QuartoCriacaoDto
                 {
                     DescricaoDto = q.Descricao,
-                }).ToList()
+                }).ToList(),
 
+               MoradorClassDto = retrievedCasa.Moradores.Select( m => new MoradoresCrracaoDto
+               {
+                   Morador = m.Nomes,
+               }).ToList()
 
             };
 

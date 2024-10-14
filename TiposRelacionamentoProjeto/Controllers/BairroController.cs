@@ -27,7 +27,7 @@ namespace TiposRelacionamentoProjeto.Controllers
                 Descricao = casa.DescricaoDto,
             };
 
-            var novoEndereco = new EnderecoModel()
+            var novoEndereco = new EnderecoModel
             {
                 Rua = casa.EnderecoClassDto.RuaDto,
                 Numero = casa.EnderecoClassDto.NumeroDto,
